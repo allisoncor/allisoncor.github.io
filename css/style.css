@@ -5,7 +5,7 @@
    ============================================================ */
 
 :root {
-  --bg: #f0efee;
+  --bg: #f2f2f2;
   --ink: #111111;
   --ink-soft: #333333;
   --rose: #b05a5e;
@@ -27,7 +27,12 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* hide the scrollbar (page still scrolls); also makes vw sizing pixel-exact */
+  scrollbar-width: none;          /* Firefox */
+}
+html::-webkit-scrollbar { display: none; }  /* Chrome / Edge / Safari */
 
 body {
   margin: 0;
