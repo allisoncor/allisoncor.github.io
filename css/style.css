@@ -139,29 +139,14 @@ a { color: inherit; }
   margin: clamp(24px, 2.917vw, 56px) var(--pad-x) clamp(40px, 4.167vw, 80px);
   font-family: var(--font-display);
   font-weight: 700;
-  /* 83pt at the 1920px design width */
-  font-size: clamp(30px, 4.323vw, 83px);
+  /* 75px at the 1920px design width */
+  font-size: clamp(30px, 3.906vw, 75px);
   letter-spacing: 0.14em;
   /* re-center: letter-spacing adds a phantom space after the last character */
   text-indent: 0.14em;
   text-transform: uppercase;
   text-align: center;
 }
-
-/* Temporary size-comparison variants of the title */
-.size-label {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: #999999;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.site-title--s95 { font-size: clamp(28.5px, 4.107vw, 78.9px); margin-top: 0; }  /*  -5% */
-.site-title--s90 { font-size: clamp(27px,   3.891vw, 74.7px); margin-top: 0; }  /* -10% */
-.site-title--s85 { font-size: clamp(25.5px, 3.674vw, 70.6px); margin-top: 0; }  /* -15% */
 
 /* ------------------------------------------------------------
    Projects
