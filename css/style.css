@@ -80,7 +80,8 @@ a { color: inherit; }
 
 .site-nav {
   display: flex;
-  gap: clamp(20px, 3vw, 48px);
+  /* 44pt between nav items at the 1920px design width */
+  gap: clamp(16px, 2.292vw, 44px);
 }
 .site-nav a,
 .mobile-menu a {
