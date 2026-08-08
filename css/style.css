@@ -1,0 +1,302 @@
+/* ============================================================
+   Allison Correnti — Portfolio
+   Shared stylesheet: banner, footer, project cards, layout.
+   Design source: design/HOME-mockup.png
+   ============================================================ */
+
+:root {
+  --bg: #f0efee;
+  --ink: #111111;
+  --ink-soft: #333333;
+  --rose: #b05a5e;
+  --rose-light: #c8898c;
+  --rose-dark: #8e4245;
+  --rose-pale: #e5cdce;
+  --footer-text: #ece5e3;
+  --font-display: "Khmer MN", "Tenor Sans", "Optima", "Segoe UI", sans-serif;
+  --font-project: "Noto Sans Khmer", "Segoe UI", sans-serif;
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-footer: Georgia, "Times New Roman", serif;
+  --content-max: 1560px;
+  --pad-x: clamp(16px, 4vw, 72px);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; }
+
+/* ------------------------------------------------------------
+   Banner (identical on every page)
+   ------------------------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px var(--pad-x);
+  background: var(--bg);
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  margin-left: -8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.site-nav {
+  display: flex;
+  gap: clamp(20px, 3vw, 48px);
+}
+.site-nav a,
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.site-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* Dropdown menu (hamburger) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 84px var(--pad-x) 32px;
+  background: var(--bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  padding: 14px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ------------------------------------------------------------
+   Page title
+   ------------------------------------------------------------ */
+.site-title {
+  margin: clamp(24px, 4vw, 56px) var(--pad-x) clamp(40px, 5vw, 80px);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.2vw, 58px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------
+   Projects
+   ------------------------------------------------------------ */
+.projects {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+.project { margin-bottom: clamp(56px, 8vw, 130px); }
+
+.project-image {
+  display: block;
+  text-decoration: none;
+}
+.project-image img {
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+.project-image:hover img { opacity: 0.92; }
+
+.project-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.project-text { max-width: 62%; }
+.project-text h2 {
+  margin: 0 0 6px;
+  font-family: var(--font-project);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.project-text p {
+  margin: 0;
+  font-family: var(--font-project);
+  font-size: 13.5px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 26px;
+  background: var(--ink);
+  color: #ffffff;
+  font-family: var(--font-project);
+  font-weight: 400;
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.btn:hover { background: var(--rose-dark); }
+.btn .arrow { font-family: var(--font-body); font-size: 15px; }
+
+/* Minor projects: 2-column grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(28px, 4vw, 90px);
+}
+.project-grid .project--wide { grid-column: 1 / -1; }
+
+/* ------------------------------------------------------------
+   Decorative rose accents (hidden on small screens)
+   ------------------------------------------------------------ */
+.deco {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.deco--top-right { top: 0; right: 0; width: clamp(120px, 14vw, 260px); }
+.page-frame { position: relative; }
+
+/* ------------------------------------------------------------
+   Footer (identical on every page)
+   ------------------------------------------------------------ */
+.site-footer {
+  margin-top: clamp(60px, 8vw, 120px);
+  color: var(--footer-text);
+}
+.site-footer .wave-top {
+  display: block;
+  width: 100%;
+  height: clamp(110px, 15vw, 290px);
+}
+.site-footer .wave-bottom {
+  display: block;
+  width: 100%;
+  height: clamp(70px, 10vw, 200px);
+}
+.footer-body {
+  background: var(--rose);
+  padding: clamp(16px, 3vw, 48px) var(--pad-x) clamp(24px, 4vw, 64px);
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(48px, 12vw, 220px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-links a {
+  display: inline-block;
+  padding: 6px 0;
+  font-family: var(--font-footer);
+  font-weight: 700;
+  font-size: clamp(17px, 2.2vw, 30px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 6px; }
+
+/* ------------------------------------------------------------
+   Stub pages
+   ------------------------------------------------------------ */
+.page-placeholder {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x) 60px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+  .deco { display: none; }
+}
+
+@media (max-width: 720px) {
+  .site-nav { display: none; }
+
+  .project-grid { grid-template-columns: 1fr; }
+
+  .project { margin-bottom: 48px; }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .project-text { max-width: 100%; }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    max-width: none;
+    top: 50%;
+  }
+  .site-footer .waves { height: 420px; }
+}
+
+@media (min-width: 1800px) {
+  body { font-size: 16px; }
+  .project-text p { font-size: 15px; }
+}
