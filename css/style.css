@@ -175,7 +175,7 @@ a { color: inherit; }
 .project-text { max-width: 77%; }
 .project-text h2 {
   line-height: 1;
-  margin: 0 0 clamp(0.8px, 0.073vw, 1.4px); /* see 3:1 ink-gap note above */
+  margin: 0 0 clamp(2.7px, 0.245vw, 4.7px); /* see 3:1 ink-gap note above; retuned for 1.275 leading */
   font-family: var(--font-project);
   /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
   font-size: clamp(14px, 1.25vw, 24px);
@@ -189,7 +189,7 @@ a { color: inherit; }
   font-size: clamp(14px, 1.25vw, 24px);
   font-weight: 300;
   color: var(--ink-soft);
-  line-height: 1.55;
+  line-height: 1.275; /* half the original 0.55em leading */
   text-wrap: pretty; /* avoid orphan words on the last line where supported */
 }
 
