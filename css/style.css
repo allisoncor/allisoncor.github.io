@@ -29,10 +29,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* hide the scrollbar (page still scrolls); also makes vw sizing pixel-exact */
-  scrollbar-width: none;          /* Firefox */
+  /* neon green scrollbar */
+  scrollbar-color: #39ff14 #f2f2f2;  /* Firefox: thumb, track */
 }
-html::-webkit-scrollbar { display: none; }  /* Chrome / Edge / Safari */
+html::-webkit-scrollbar { width: 12px; }             /* Chrome / Edge / Safari */
+html::-webkit-scrollbar-track { background: #f2f2f2; }
+html::-webkit-scrollbar-thumb {
+  background: #39ff14;
+  border-radius: 6px;
+}
+html::-webkit-scrollbar-thumb:hover { background: #2ecc0f; }
 
 body {
   margin: 0;
