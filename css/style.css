@@ -166,12 +166,14 @@ a { color: inherit; }
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-top: clamp(14px, 1.146vw, 22px);
+  /* picture -> title : title -> description = 3 : 1 (36px : 12px at 1920) */
+  margin-top: clamp(21px, 1.875vw, 36px);
 }
 
 .project-text { max-width: 77%; }
 .project-text h2 {
-  margin: 0 0 6px;
+  line-height: 1; /* keep the margins the true measure of the 3:1 spacing */
+  margin: 0 0 clamp(7px, 0.625vw, 12px);
   font-family: var(--font-project);
   /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
   font-size: clamp(14px, 1.25vw, 24px);
