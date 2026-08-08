@@ -169,7 +169,7 @@ a { color: inherit; }
   margin-top: clamp(14px, 1.146vw, 22px);
 }
 
-.project-text { max-width: 62%; }
+.project-text { max-width: 77%; }
 .project-text h2 {
   margin: 0 0 6px;
   font-family: var(--font-project);
