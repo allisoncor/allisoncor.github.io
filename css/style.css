@@ -90,6 +90,8 @@ a { color: inherit; }
   /* ~20px at the 1920px design width (measured from mockup; 28pt read too large next to the title) */
   font-size: clamp(12px, 1.042vw, 20px);
   letter-spacing: 0.18em;
+  /* letter-spacing adds a phantom space after the last character — cancel it */
+  margin-right: -0.18em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -126,6 +128,8 @@ a { color: inherit; }
   /* 83pt at the 1920px design width */
   font-size: clamp(30px, 4.323vw, 83px);
   letter-spacing: 0.14em;
+  /* re-center: letter-spacing adds a phantom space after the last character */
+  text-indent: 0.14em;
   text-transform: uppercase;
   text-align: center;
 }
