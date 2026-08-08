@@ -153,6 +153,10 @@ a { color: inherit; }
 
 .project { margin-bottom: clamp(48px, 6.771vw, 130px); }
 
+/* Titles whose glyphs have descenders (y, g, J) carry ink 5px lower at 1920;
+   --dd shifts the description and button down so the ink rules still hold. */
+.project--desc { --dd: clamp(2.9px, 0.26vw, 5px); }
+
 .project-image {
   display: block;
   text-decoration: none;
@@ -175,7 +179,7 @@ a { color: inherit; }
 .project-text { max-width: 77%; }
 .project-text h2 {
   line-height: 1;
-  margin: 0 0 clamp(2.7px, 0.245vw, 4.7px); /* see 3:1 ink-gap note above; retuned for 1.275 leading */
+  margin: 0 0 calc(clamp(2.7px, 0.245vw, 4.7px) + var(--dd, 0px)); /* see 3:1 ink-gap note above */
   font-family: var(--font-project);
   /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
   font-size: clamp(14px, 1.25vw, 24px);
@@ -199,7 +203,7 @@ a { color: inherit; }
   align-items: center;
   gap: clamp(7px, 0.625vw, 12px);
   /* button top sits at the title's ink bottom (22.7px below the meta row at 1920) */
-  margin-top: clamp(13.2px, 1.182vw, 22.7px);
+  margin-top: calc(clamp(13.2px, 1.182vw, 22.7px) + var(--dd, 0px));
   /* uniform 18px ink-level padding on all four sides at 1920, pixel-scan
      calibrated. Values differ because fonts/PNG carry built-in space to the ink. */
   padding: clamp(5.8px, 0.521vw, 10px) clamp(7.6px, 0.677vw, 13px) clamp(5.8px, 0.521vw, 10px) clamp(11.1px, 0.99vw, 19px);
