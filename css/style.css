@@ -70,24 +70,19 @@ a { color: inherit; }
 
 .menu-toggle {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
   padding: 8px;
   margin-left: -8px;
   background: none;
   border: none;
   cursor: pointer;
 }
-.menu-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--ink);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+.menu-toggle img {
+  width: clamp(20px, 1.354vw, 26px);
+  height: auto;
+  transition: transform 0.25s ease;
 }
-.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.menu-toggle[aria-expanded="true"] img { transform: rotate(90deg); }
 
 .site-nav {
   display: flex;
