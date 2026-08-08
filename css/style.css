@@ -207,7 +207,7 @@ a { color: inherit; }
   font-weight: 400;
   /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
   font-size: clamp(14px, 1.25vw, 24px);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em; /* halved from 0.2em */
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 0; /* square corners per design */
@@ -215,7 +215,7 @@ a { color: inherit; }
   transition: background 0.2s ease;
 }
 .btn:hover { background: var(--rose-dark); }
-.btn img.arrow { width: clamp(14px, 1.25vw, 24px); height: auto; }
+.btn img.arrow { width: clamp(17.5px, 1.563vw, 30px); height: auto; } /* +25% */
 
 /* Minor projects: 2-column grid */
 .project-grid {
