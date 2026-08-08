@@ -13,7 +13,7 @@
   --rose-dark: #8e4245;
   --rose-pale: #e5cdce;
   --footer-text: #ece5e3;
-  --font-display: "Forum", serif;
+  --font-display: "Tenor Sans", "Segoe UI", sans-serif;
   --font-project: "Noto Sans Khmer", "Segoe UI", sans-serif;
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-footer: Georgia, "Times New Roman", serif;
@@ -97,9 +97,9 @@ a { color: inherit; }
 .site-nav a,
 .mobile-menu a {
   font-family: var(--font-display);
-  font-weight: 400; /* Forum ships only 400; synthetic bold would distort it */
-  /* ~20px at the 1920px design width (measured from mockup; 28pt read too large next to the title) */
-  font-size: clamp(12px, 1.042vw, 20px);
+  font-weight: 400; /* Tenor Sans ships only 400 */
+  /* 20px reduced 16% -> 16.8px at the 1920px design width */
+  font-size: clamp(11px, 0.875vw, 16.8px);
   letter-spacing: 0.18em;
   /* letter-spacing adds a phantom space after the last character — cancel it */
   margin-right: -0.18em;
@@ -109,7 +109,7 @@ a { color: inherit; }
 .site-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
 
 /* Pull the slash in "ART / GLASS" inward so each side gap is half a normal one */
-.slash-tight { margin: 0 -0.22em; }  /* calibrated for Forum: half of its natural 8.8px gap */
+.slash-tight { margin: 0 -0.265em; }  /* calibrated for Tenor Sans: half its natural gap (em-based, size-independent) */
 
 /* Dropdown menu (hamburger) */
 .mobile-menu {
@@ -138,13 +138,13 @@ a { color: inherit; }
 .site-title {
   margin: clamp(24px, 2.917vw, 56px) var(--pad-x) clamp(40px, 4.167vw, 80px);
   font-family: var(--font-display);
-  font-weight: 400; /* Forum ships only 400; synthetic bold would distort it */
-  /* 83pt at the 1920px design width */
-  font-size: clamp(30px, 4.323vw, 83px);
-  /* +0.07em lands Forum at the mockup's measured 762px title width */
-  letter-spacing: 0.07em;
+  font-weight: 400; /* Tenor Sans ships only 400 */
+  /* 83pt reduced 16% -> 69.7px at the 1920px design width */
+  font-size: clamp(28px, 3.631vw, 69.7px);
+  /* +0.02em lands Tenor Sans at the mockup's measured 762px title width */
+  letter-spacing: 0.02em;
   /* re-center: letter-spacing adds a phantom space after the last character */
-  text-indent: 0.07em;
+  text-indent: 0.02em;
   text-transform: uppercase;
   text-align: center;
 }
