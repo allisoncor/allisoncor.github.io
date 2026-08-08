@@ -71,8 +71,7 @@ a { color: inherit; }
 .menu-toggle {
   display: flex;
   align-items: center;
-  padding: 8px;
-  margin-left: -8px;
+  padding: 0; /* icon sets its own height; padding here would grow the header */
   background: none;
   border: none;
   cursor: pointer;
