@@ -17,8 +17,12 @@
   --font-project: "Noto Sans Khmer", "Segoe UI", sans-serif;
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-footer: Georgia, "Times New Roman", serif;
-  --content-max: 1560px;
-  --pad-x: clamp(16px, 4vw, 72px);
+  /* Content bounds: 160px..1760px at the 1920px design width.
+     Outer cap = 160 + 1600 content + 160 (border-box includes padding). */
+  --content-max: 1920px;
+  --pad-x: clamp(20px, 8.333vw, 160px);
+  /* Banner has its own tighter padding (~40px at 1920) */
+  --banner-pad: clamp(16px, 2.083vw, 40px);
 }
 
 * { box-sizing: border-box; }
@@ -49,7 +53,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px var(--pad-x);
+  padding: 18px var(--banner-pad);
   background: var(--bg);
 }
 
@@ -82,7 +86,8 @@ a { color: inherit; }
 .mobile-menu a {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 13px;
+  /* 28pt at the 1920px design width, scaling down proportionally */
+  font-size: clamp(13px, 1.458vw, 28px);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -97,7 +102,7 @@ a { color: inherit; }
   left: 0;
   right: 0;
   z-index: 99;
-  padding: 84px var(--pad-x) 32px;
+  padding: 84px var(--banner-pad) 32px;
   background: var(--bg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
@@ -117,7 +122,8 @@ a { color: inherit; }
   margin: clamp(24px, 4vw, 56px) var(--pad-x) clamp(40px, 5vw, 80px);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(28px, 4.2vw, 58px);
+  /* 83pt at the 1920px design width */
+  font-size: clamp(30px, 4.323vw, 83px);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-align: center;
@@ -156,14 +162,16 @@ a { color: inherit; }
 .project-text h2 {
   margin: 0 0 6px;
   font-family: var(--font-project);
-  font-size: 15px;
+  /* 24pt at the 1920px design width */
+  font-size: clamp(15px, 1.25vw, 24px);
   font-weight: 800;
   letter-spacing: 0.01em;
 }
 .project-text p {
   margin: 0;
   font-family: var(--font-project);
-  font-size: 13.5px;
+  /* 24pt at the 1920px design width */
+  font-size: clamp(13.5px, 1.25vw, 24px);
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.55;
@@ -179,7 +187,8 @@ a { color: inherit; }
   color: #ffffff;
   font-family: var(--font-project);
   font-weight: 400;
-  font-size: 12.5px;
+  /* 24pt at the 1920px design width */
+  font-size: clamp(12.5px, 1.25vw, 24px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -194,7 +203,8 @@ a { color: inherit; }
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: clamp(28px, 4vw, 90px);
+  /* 118px gutter at the 1920px design width */
+  column-gap: clamp(24px, 6.146vw, 118px);
 }
 .project-grid .project--wide { grid-column: 1 / -1; }
 
@@ -298,5 +308,4 @@ a { color: inherit; }
 
 @media (min-width: 1800px) {
   body { font-size: 16px; }
-  .project-text p { font-size: 15px; }
 }
