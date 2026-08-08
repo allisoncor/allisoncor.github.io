@@ -86,8 +86,8 @@ a { color: inherit; }
 .mobile-menu a {
   font-family: var(--font-display);
   font-weight: 700;
-  /* 28pt at the 1920px design width, scaling down proportionally */
-  font-size: clamp(13px, 1.458vw, 28px);
+  /* ~20px at the 1920px design width (measured from mockup; 28pt read too large next to the title) */
+  font-size: clamp(12px, 1.042vw, 20px);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -119,7 +119,7 @@ a { color: inherit; }
    Page title
    ------------------------------------------------------------ */
 .site-title {
-  margin: clamp(24px, 4vw, 56px) var(--pad-x) clamp(40px, 5vw, 80px);
+  margin: clamp(24px, 2.917vw, 56px) var(--pad-x) clamp(40px, 4.167vw, 80px);
   font-family: var(--font-display);
   font-weight: 700;
   /* 83pt at the 1920px design width */
@@ -138,7 +138,7 @@ a { color: inherit; }
   padding: 0 var(--pad-x);
 }
 
-.project { margin-bottom: clamp(56px, 8vw, 130px); }
+.project { margin-bottom: clamp(48px, 6.771vw, 130px); }
 
 .project-image {
   display: block;
@@ -155,23 +155,23 @@ a { color: inherit; }
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-top: 22px;
+  margin-top: clamp(14px, 1.146vw, 22px);
 }
 
 .project-text { max-width: 62%; }
 .project-text h2 {
   margin: 0 0 6px;
   font-family: var(--font-project);
-  /* 24pt at the 1920px design width */
-  font-size: clamp(15px, 1.25vw, 24px);
+  /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
+  font-size: clamp(14px, 1.25vw, 24px);
   font-weight: 800;
   letter-spacing: 0.01em;
 }
 .project-text p {
   margin: 0;
   font-family: var(--font-project);
-  /* 24pt at the 1920px design width */
-  font-size: clamp(13.5px, 1.25vw, 24px);
+  /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
+  font-size: clamp(14px, 1.25vw, 24px);
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.55;
@@ -182,13 +182,13 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 26px;
+  padding: clamp(8px, 0.625vw, 12px) clamp(16px, 1.354vw, 26px);
   background: var(--ink);
   color: #ffffff;
   font-family: var(--font-project);
   font-weight: 400;
-  /* 24pt at the 1920px design width */
-  font-size: clamp(12.5px, 1.25vw, 24px);
+  /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
+  font-size: clamp(14px, 1.25vw, 24px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -223,27 +223,27 @@ a { color: inherit; }
    Footer (identical on every page)
    ------------------------------------------------------------ */
 .site-footer {
-  margin-top: clamp(60px, 8vw, 120px);
+  margin-top: clamp(60px, 6.25vw, 120px);
   color: var(--footer-text);
 }
 .site-footer .wave-top {
   display: block;
   width: 100%;
-  height: clamp(110px, 15vw, 290px);
+  height: clamp(110px, 15.104vw, 290px);
 }
 .site-footer .wave-bottom {
   display: block;
   width: 100%;
-  height: clamp(70px, 10vw, 200px);
+  height: clamp(70px, 10.417vw, 200px);
 }
 .footer-body {
   background: var(--rose);
-  padding: clamp(16px, 3vw, 48px) var(--pad-x) clamp(24px, 4vw, 64px);
+  padding: clamp(16px, 2.5vw, 48px) var(--pad-x) clamp(24px, 3.333vw, 64px);
 }
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: clamp(48px, 12vw, 220px);
+  gap: clamp(48px, 11.458vw, 220px);
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -257,7 +257,7 @@ a { color: inherit; }
   padding: 6px 0;
   font-family: var(--font-footer);
   font-weight: 700;
-  font-size: clamp(17px, 2.2vw, 30px);
+  font-size: clamp(17px, 1.563vw, 30px);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
