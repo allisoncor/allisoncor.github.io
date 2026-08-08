@@ -186,6 +186,7 @@ a { color: inherit; }
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.55;
+  text-wrap: pretty; /* avoid orphan words on the last line where supported */
 }
 
 .btn {
