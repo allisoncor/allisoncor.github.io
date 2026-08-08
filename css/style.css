@@ -97,6 +97,9 @@ a { color: inherit; }
 }
 .site-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
 
+/* Pull the slash in "ART / GLASS" inward so each side gap is half a normal one */
+.slash-tight { margin: 0 -0.265em; }
+
 /* Dropdown menu (hamburger) */
 .mobile-menu {
   display: none;
