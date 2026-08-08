@@ -78,7 +78,7 @@ a { color: inherit; }
   cursor: pointer;
 }
 .menu-toggle img {
-  width: clamp(20px, 1.354vw, 26px);
+  width: clamp(24px, 1.667vw, 32px);
   height: auto;
   transition: transform 0.25s ease;
 }
