@@ -200,10 +200,9 @@ a { color: inherit; }
   gap: clamp(7px, 0.625vw, 12px);
   /* button top sits at the title's ink bottom (22.7px below the meta row at 1920) */
   margin-top: clamp(13.2px, 1.182vw, 22.7px);
-  /* uniform ink-level padding on all four sides, pixel-scan calibrated:
-     all gaps = the E-ink to arrow-ink distance (20.5px at 1920).
-     Values differ because fonts/PNG carry built-in space to the ink. */
-  padding: clamp(7.3px, 0.651vw, 12.5px) clamp(9px, 0.807vw, 15.5px) clamp(7.3px, 0.651vw, 12.5px) clamp(12.5px, 1.12vw, 21.5px);
+  /* uniform 18px ink-level padding on all four sides at 1920, pixel-scan
+     calibrated. Values differ because fonts/PNG carry built-in space to the ink. */
+  padding: clamp(5.8px, 0.521vw, 10px) clamp(7.6px, 0.677vw, 13px) clamp(5.8px, 0.521vw, 10px) clamp(11.1px, 0.99vw, 19px);
   background: var(--ink);
   color: #ffffff;
   font-family: var(--font-project);
