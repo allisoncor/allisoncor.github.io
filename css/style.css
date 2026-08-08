@@ -197,11 +197,12 @@ a { color: inherit; }
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(7px, 0.625vw, 12px);
   /* button top sits at the title's ink bottom (22.7px below the meta row at 1920) */
   margin-top: clamp(13.2px, 1.182vw, 22.7px);
-  /* right padding tuned so arrow-ink -> edge equals E-ink -> arrow-ink (19.7px at 1920) */
-  padding: clamp(8px, 0.625vw, 12px) clamp(8.9px, 0.75vw, 14.4px) clamp(8px, 0.625vw, 12px) clamp(16px, 1.354vw, 26px);
+  /* uniform 19.7px ink-level padding on all four sides at 1920
+     (values differ because fonts/PNG carry built-in space to the ink) */
+  padding: clamp(6.6px, 0.594vw, 11.4px) clamp(8.9px, 0.75vw, 14.4px) clamp(6.8px, 0.609vw, 11.7px) clamp(12px, 1.078vw, 20.7px);
   background: var(--ink);
   color: #ffffff;
   font-family: var(--font-project);
