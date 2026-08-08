@@ -29,16 +29,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* neon green scrollbar */
-  scrollbar-color: #39ff14 #f2f2f2;  /* Firefox: thumb, track */
+  /* rose scrollbar on dark contrasting track */
+  scrollbar-color: #b26363 #232323;  /* Firefox: thumb, track */
 }
 html::-webkit-scrollbar { width: 12px; }             /* Chrome / Edge / Safari */
-html::-webkit-scrollbar-track { background: #f2f2f2; }
+html::-webkit-scrollbar-track { background: #232323; }
 html::-webkit-scrollbar-thumb {
-  background: #39ff14;
+  background: #b26363;
   border-radius: 6px;
 }
-html::-webkit-scrollbar-thumb:hover { background: #2ecc0f; }
+html::-webkit-scrollbar-thumb:hover { background: #9e5457; }
 
 body {
   margin: 0;
