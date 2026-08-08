@@ -149,6 +149,16 @@ a { color: inherit; }
 }
 
 /* Temporary size-comparison variants of the title */
+.size-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #999999;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 .site-title--s95 { font-size: clamp(28.5px, 4.107vw, 78.9px); margin-top: 0; }  /*  -5% */
 .site-title--s90 { font-size: clamp(27px,   3.891vw, 74.7px); margin-top: 0; }  /* -10% */
 .site-title--s85 { font-size: clamp(25.5px, 3.674vw, 70.6px); margin-top: 0; }  /* -15% */
