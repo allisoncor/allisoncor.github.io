@@ -59,7 +59,7 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   padding: 18px var(--banner-pad);
-  background: var(--bg);
+  background: #ffffff;
 }
 
 .menu-toggle {
