@@ -200,7 +200,8 @@ a { color: inherit; }
   gap: 12px;
   /* button top sits at the title's ink bottom (22.7px below the meta row at 1920) */
   margin-top: clamp(13.2px, 1.182vw, 22.7px);
-  padding: clamp(8px, 0.625vw, 12px) clamp(16px, 1.354vw, 26px);
+  /* right padding tuned so arrow-ink -> edge equals E-ink -> arrow-ink (19.7px at 1920) */
+  padding: clamp(8px, 0.625vw, 12px) clamp(8.9px, 0.75vw, 14.4px) clamp(8px, 0.625vw, 12px) clamp(16px, 1.354vw, 26px);
   background: var(--ink);
   color: #ffffff;
   font-family: var(--font-project);
