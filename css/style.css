@@ -166,14 +166,16 @@ a { color: inherit; }
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  /* picture -> title : title -> description = 3 : 1 (36px : 12px at 1920) */
-  margin-top: clamp(21px, 1.875vw, 36px);
+  /* picture -> title : title -> description = 3:1 measured ink-to-ink
+     (36px : 12px at 1920; margins are smaller because font leading
+     contributes ~2.5px to gap 1 and ~10.6px to gap 2) */
+  margin-top: clamp(19.5px, 1.745vw, 33.5px);
 }
 
 .project-text { max-width: 77%; }
 .project-text h2 {
-  line-height: 1; /* keep the margins the true measure of the 3:1 spacing */
-  margin: 0 0 clamp(7px, 0.625vw, 12px);
+  line-height: 1;
+  margin: 0 0 clamp(0.8px, 0.073vw, 1.4px); /* see 3:1 ink-gap note above */
   font-family: var(--font-project);
   /* 24pt at the 1920px design width; shared floor keeps title/desc/button equal at every size */
   font-size: clamp(14px, 1.25vw, 24px);
