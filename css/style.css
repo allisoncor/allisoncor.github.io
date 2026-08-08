@@ -159,9 +159,7 @@ a { color: inherit; }
 }
 .project-image img {
   width: 100%;
-  transition: opacity 0.2s ease;
 }
-.project-image:hover img { opacity: 0.92; }
 
 .project-meta {
   display: flex;
