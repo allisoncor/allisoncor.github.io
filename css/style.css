@@ -198,6 +198,8 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  /* button top sits at the title's ink bottom (22.7px below the meta row at 1920) */
+  margin-top: clamp(13.2px, 1.182vw, 22.7px);
   padding: clamp(8px, 0.625vw, 12px) clamp(16px, 1.354vw, 26px);
   background: var(--ink);
   color: #ffffff;
@@ -208,12 +210,12 @@ a { color: inherit; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 0; /* square corners per design */
   white-space: nowrap;
   transition: background 0.2s ease;
 }
 .btn:hover { background: var(--rose-dark); }
-.btn .arrow { font-family: var(--font-body); font-size: 15px; }
+.btn img.arrow { width: clamp(14px, 1.25vw, 24px); height: auto; }
 
 /* Minor projects: 2-column grid */
 .project-grid {
