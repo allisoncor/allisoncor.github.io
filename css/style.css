@@ -13,7 +13,7 @@
   --rose-dark: #8e4245;
   --rose-pale: #e5cdce;
   --footer-text: #ece5e3;
-  --font-display: "Khmer MN", "Tenor Sans", "Optima", "Segoe UI", sans-serif;
+  --font-display: "Forum", serif;
   --font-project: "Noto Sans Khmer", "Segoe UI", sans-serif;
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-footer: Georgia, "Times New Roman", serif;
@@ -97,7 +97,7 @@ a { color: inherit; }
 .site-nav a,
 .mobile-menu a {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400; /* Forum ships only 400; synthetic bold would distort it */
   /* ~20px at the 1920px design width (measured from mockup; 28pt read too large next to the title) */
   font-size: clamp(12px, 1.042vw, 20px);
   letter-spacing: 0.18em;
@@ -109,7 +109,7 @@ a { color: inherit; }
 .site-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
 
 /* Pull the slash in "ART / GLASS" inward so each side gap is half a normal one */
-.slash-tight { margin: 0 -0.265em; }
+.slash-tight { margin: 0 -0.22em; }  /* calibrated for Forum: half of its natural 8.8px gap */
 
 /* Dropdown menu (hamburger) */
 .mobile-menu {
@@ -138,12 +138,13 @@ a { color: inherit; }
 .site-title {
   margin: clamp(24px, 2.917vw, 56px) var(--pad-x) clamp(40px, 4.167vw, 80px);
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400; /* Forum ships only 400; synthetic bold would distort it */
   /* 83pt at the 1920px design width */
   font-size: clamp(30px, 4.323vw, 83px);
-  letter-spacing: 0.14em;
+  /* +0.07em lands Forum at the mockup's measured 762px title width */
+  letter-spacing: 0.07em;
   /* re-center: letter-spacing adds a phantom space after the last character */
-  text-indent: 0.14em;
+  text-indent: 0.07em;
   text-transform: uppercase;
   text-align: center;
 }
