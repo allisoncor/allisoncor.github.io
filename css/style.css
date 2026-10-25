@@ -305,6 +305,91 @@ a { color: inherit; }
 .footer-links a:hover { text-decoration: underline; text-underline-offset: 6px; }
 
 /* ------------------------------------------------------------
+   Resume page
+   ------------------------------------------------------------ */
+.resume {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  font-family: var(--font-project);
+  font-weight: 300;
+  font-size: clamp(14px, 1.042vw, 20px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.resume a:not(.btn) { color: var(--rose-dark); text-decoration: none; }
+.resume a:not(.btn):hover { text-decoration: underline; }
+.resume .sep { margin: 0 0.4em; color: var(--rose); }
+
+.resume-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 4.167vw, 80px);
+  padding-bottom: clamp(24px, 2.083vw, 40px);
+  border-bottom: 2px solid var(--rose);
+}
+.resume-contact { margin: 0 0 clamp(10px, 0.833vw, 16px); }
+.resume-summary {
+  margin: 0;
+  max-width: 62em;
+  font-size: clamp(15px, 1.25vw, 24px);
+  text-wrap: pretty;
+}
+.resume-download { margin-top: 0; }
+
+.resume-section { margin-top: clamp(32px, 3.125vw, 60px); }
+.resume-section h2 {
+  margin: 0 0 clamp(14px, 1.25vw, 24px);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(18px, 1.563vw, 30px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose-dark);
+}
+
+.resume-entry + .resume-entry { margin-top: clamp(20px, 1.875vw, 36px); }
+.resume-entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+.resume-entry h3 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(15px, 1.25vw, 24px);
+  color: var(--ink);
+}
+.resume-date { flex-shrink: 0; white-space: nowrap; }
+.resume-org { margin: 2px 0 0; color: #777777; }
+.resume-entry ul { margin: clamp(8px, 0.625vw, 12px) 0 0; padding-left: 1.2em; }
+.resume-entry li { margin-bottom: 0.3em; text-wrap: pretty; }
+.resume-entry li::marker { color: var(--rose); }
+
+.resume-skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: clamp(20px, 2.604vw, 50px);
+  margin: 0;
+}
+.resume-skills dt,
+.resume-skills dd {
+  margin: 0;
+  padding: clamp(8px, 0.625vw, 12px) 0;
+  border-bottom: 1px solid rgba(176, 90, 94, 0.2);
+}
+.resume-skills dt { font-weight: 800; color: var(--ink); }
+
+@media (max-width: 720px) {
+  .resume-head { flex-direction: column; }
+  .resume-entry-head { flex-direction: column; gap: 2px; }
+  .resume-skills { grid-template-columns: 1fr; }
+  .resume-skills dt { border-bottom: none; padding-bottom: 0; }
+}
+
+/* ------------------------------------------------------------
    Stub pages
    ------------------------------------------------------------ */
 .page-placeholder {

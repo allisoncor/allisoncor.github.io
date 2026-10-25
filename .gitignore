@@ -1,3 +1,6 @@
 # macOS metadata junk
 .DS_Store
 ._*
+
+# source draft; the published copy is files/allison-correnti-resume.pdf
+/Allison Correnti Resume Draft.pdf
