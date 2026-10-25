@@ -51,7 +51,12 @@ body {
   font-size: 15px;
   line-height: 1.5;
   overflow-x: hidden;
+  /* short pages (Contact) still push the footer to the bottom of the window */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+body > main { flex: 1 0 auto; }
 
 img { display: block; max-width: 100%; height: auto; }
 
@@ -279,11 +284,16 @@ a { color: inherit; }
   display: block;
   width: 100%;
   height: clamp(110px, 15.104vw, 290px);
+  /* overlap the rose band by 1px so fractional sizes can't leave a seam */
+  margin-bottom: -1px;
+  position: relative;
 }
 .site-footer .wave-bottom {
   display: block;
   width: 100%;
   height: clamp(70px, 10.417vw, 200px);
+  margin-top: -1px;
+  position: relative;
 }
 .footer-body {
   background: var(--rose);
