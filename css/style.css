@@ -13,7 +13,10 @@
   --rose-dark: #8e4245;
   --rose-pale: #e5cdce;
   --footer-text: #ece5e3;
-  --font-display: "Khmer MN", "Tenor Sans", "Optima", "Segoe UI", sans-serif;
+  /* Tenor Sans everywhere so every device renders identically. The design was
+     drawn in Khmer MN (Mac-only system font); to restore it on Macs, put
+     "Khmer MN" first in this list. */
+  --font-display: "Tenor Sans", "Segoe UI", sans-serif;
   --font-project: "Noto Sans Khmer", "Segoe UI", sans-serif;
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-footer: Georgia, "Times New Roman", serif;
