@@ -234,6 +234,12 @@ a { color: inherit; }
   column-gap: clamp(24px, 6.146vw, 118px);
 }
 .project-grid .project--wide { grid-column: 1 / -1; }
+/* Every 2-column tile shares the mockup's 773:765 shape so paired titles
+   always line up, whatever proportions an uploaded image has. */
+.project-grid .project:not(.project--wide) .project-image img {
+  aspect-ratio: 773 / 765;
+  object-fit: cover;
+}
 
 /* ------------------------------------------------------------
    Decorative rose accents (hidden on small screens)
