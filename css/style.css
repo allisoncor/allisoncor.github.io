@@ -279,6 +279,8 @@ a { color: inherit; }
   position: relative; /* anchor for the footer-attached edge decorations */
   margin-top: clamp(60px, 6.25vw, 120px);
   color: var(--footer-text);
+  /* covers sub-pixel rounding at the page bottom (high-DPI screens) */
+  box-shadow: 0 2px 0 var(--rose);
 }
 .site-footer .wave-top {
   display: block;
