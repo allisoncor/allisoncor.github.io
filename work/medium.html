@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medium Magazine — Allison Correnti</title>
+  <meta name="description" content="Mediums is an artistic magazine that celebrates unconventional mediums and boundary-pushing creativity. Inspired by postmodern aesthetics, the concept merg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;800&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=2026-11-06a">
+  <link rel="stylesheet" href="../css/work.css?v=2299677c">
+</head>
+<body class="page-frame">
+
+  <!-- ===== Decorative rose accent (top right) ===== -->
+  <svg class="deco deco--top-right" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M260 0 L260 210 C 190 190 130 130 105 60 C 95 35 90 15 88 0 Z" fill="#e5cdce"/>
+  </svg>
+
+  <!-- ===== Banner (same on every page) ===== -->
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+      <img src="../images/Icons/Menu.png" alt="" width="78" height="78">
+    </button>
+    <nav class="site-nav">
+      <a href="../index.html">Portfolio</a>
+      <a href="../physical-designs.html">Physical Designs</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+  <nav class="mobile-menu" aria-label="Mobile menu">
+    <a href="../index.html">Portfolio</a>
+    <a href="../physical-designs.html">Physical Designs</a>
+    <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+  </nav>
+  <!-- ===== /Banner ===== -->
+
+  <main class="work">
+    <a class="work-back" href="../index.html"><svg class="work-back__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12H4M11 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a>
+    <section class="work2-intro">
+      <button class="work2-hero" type="button" data-index="0" aria-label="Enlarge: Medium Magazine">
+        <img src="../projects/medium/hero.jpg?v=51cf85fb" alt="Medium Magazine — Acrylic vs Oil cover" width="1200" height="1188">
+      </button>
+      <div class="work2-text">
+        <h1>Medium Magazine</h1>
+        <p>Mediums is an artistic magazine that celebrates unconventional mediums and boundary-pushing creativity. Inspired by postmodern aesthetics, the concept merges vibrant visuals with experimental layouts to create a visually stimulating and&nbsp;thought-provoking&nbsp;experience.</p>
+      </div>
+    </section>
+
+    <h2 class="work2-process">My process
+      <svg class="work2-process__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17M5 13l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </h2>
+    <div class="work2-gallery" id="gallery"></div>
+
+    <nav class="work-pager" aria-label="More projects">
+      <a class="work-pager__prev" href="clarity.html"><span>&larr; Previous</span>Clarity</a>
+      <a class="work-pager__next" href="insomnia.html"><span>Next &rarr;</span>Insomnia Coffee + Cookies</a>
+    </nav>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" type="button" aria-label="Previous image">&larr;</button>
+    <img alt="">
+    <button class="lightbox__next" type="button" aria-label="Next image">&rarr;</button>
+    <div class="lightbox__count"></div>
+  </div>
+  <script type="application/json" id="work-data">{"images":["../projects/medium/hero.jpg?v=51cf85fb","../projects/medium/1.jpg?v=8dd1c357","../projects/medium/2.jpg?v=ec6a7010","../projects/medium/3.jpg?v=62b6d822"],"big":{"file":"3.jpg","row":0,"col":1,"fill":true}}</script>
+  <script src="../js/work.js?v=60373b02"></script>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <svg class="wave-top" viewBox="0 0 1920 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#c8898c" d="M0,240 C 340,100 780,90 1100,160 C 1410,225 1700,190 1920,90 L1920,310 L0,310 Z"/>
+      <path fill="#b05a5e" d="M0,270 C 340,130 780,120 1100,190 C 1410,255 1700,220 1920,120 L1920,310 L0,310 Z"/>
+    </svg>
+    <div class="footer-body">
+    <div class="footer-links">
+      <ul>
+        <li><a href="../index.html">Portfolio Home</a></li>
+        <li><a href="../physical-designs.html">Physical Designs</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+      </ul>
+      <ul>
+        <li><a href="mailto:allison.correnti@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/allison-correnti" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>         <!-- TODO: profile URL -->
+      </ul>
+    </div>
+    </div>
+    <svg class="wave-bottom" viewBox="0 0 1920 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#b05a5e" d="M0,-10 H1920 V210 H0 Z"/>
+      <path fill="#8e4245" d="M0,200 C 300,90 700,60 1080,105 C 1420,146 1700,125 1920,40 L1920,120 C 1680,200 1380,220 1040,185 C 720,152 340,170 120,200 Z"/>
+    </svg>
+  </footer>
+  <!-- ===== /Footer ===== -->
+  <script src="../js/main.js?v=2026-10-25"></script>
+</body>
+</html>
